@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'timing_attack'
+require './lib/load_timing_attack'
 
 class TimingAttackCli
   attr_reader :options

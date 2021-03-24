@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "timing_attack"
-
-require "pry"
-Pry.start

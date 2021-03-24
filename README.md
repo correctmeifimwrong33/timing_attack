@@ -9,13 +9,17 @@ discrepancies in the application's response time.
 If you need a known-vulnerable application for testing and/or development, see
 [Camelflage](https://github.com/ffleming/camelflage).
 
-## Installation
+## Setup
 
 ```bash
-% gem install timing_attack
+$ sudo apt install ruby-{dev,progressbar,json}
+$ gem install typhoeus
+$ ./timing_attack
 ```
 
 ## Usage
+
+`./timing_attack -u https://example.com/ -c 1 -n 1000 --brute-force --headers '{"X-Api-Key": "INPUT"}'`
 
 ```
 timing_attack [options] -u <target> <inputs>

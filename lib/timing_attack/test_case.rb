@@ -9,10 +9,7 @@ module TimingAttack
       @times = []
       @percentiles = []
       @hydra_requests = []
-      @url = URI.escape(
-        options.fetch(:url).
-        gsub(INPUT_FLAG, input)
-      )
+      @url = options.fetch(:url).gsub(INPUT_FLAG, URI.encode_www_form_component(input))
       @params = params_from(options.fetch(:params, {}))
       @body = params_from(options.fetch(:body, {}))
       @headers = params_from(options.fetch(:headers, {}))
